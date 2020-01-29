@@ -9,6 +9,7 @@ import { EncabezadoComponent } from './plantilla/encabezado/encabezado.component
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

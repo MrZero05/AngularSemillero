@@ -8,6 +8,7 @@ import { PieDePaginaComponent } from './plantilla/pie-de-pagina/pie-de-pagina.co
 import { EncabezadoComponent } from './plantilla/encabezado/encabezado.component';
 import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.component';
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-p
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

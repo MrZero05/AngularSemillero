@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FormGroup, FormControl} from '@angular/forms';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -18,8 +18,8 @@ inicioSesionFrom: FormGroup;
 
   crearFormulario(){
     this.inicioSesionFrom = new FormGroup({
-      nombreUsuario: new FormControl('Daniel'),
-      password: new FormControl('Osorio')
+      nombreUsuario: new FormControl(null, [Validators.required, Validators.minLength(2)]),
+      password: new FormControl(null)
     })
   }
 

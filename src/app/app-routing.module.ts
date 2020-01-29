@@ -8,12 +8,12 @@ import { PlantillaComponent } from './plantilla/plantilla.component';
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'main', pathMatch: 'full' },
-  {path: 'main', component: PaginaPrincipalComponent },
+  {path: '', redirectTo: 'layout', pathMatch: 'full'},
   {path: 'login', component: InicioSesionComponent},
-  {path: 'header', component: EncabezadoComponent},
-  {path: 'footer', component: PieDePaginaComponent},
-  {path: 'layout', component: PlantillaComponent}
+  {path: 'layout', component: PlantillaComponent, children: [
+    {path: '', redirectTo: 'main', pathMatch: 'full'},
+    {path: 'main', component: PaginaPrincipalComponent}
+  ]}
 ];
 
 @NgModule({

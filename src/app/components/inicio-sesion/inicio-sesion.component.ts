@@ -23,6 +23,10 @@ inicioSesionFrom: FormGroup;
     })
   }
 
+  enviarFormulario(){
+    console.log('formulario', this.inicioSesionFrom.value);
+  }
+
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class. 

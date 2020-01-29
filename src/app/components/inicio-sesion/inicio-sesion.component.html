@@ -17,7 +17,7 @@
         <form [formGroup]="inicioSesionFrom">
             <input type="text" id="login" class="fadeIn second" formControlName="nombreUsuario" placeholder="username">
             <input type="text" id="password" class="fadeIn third" formControlName="password" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
+            <input type="submit" (click)="enviarFormulario()" class="fadeIn fourth" value="Log In">
         </form>
 
         <!-- Remind Passowrd -->

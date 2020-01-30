@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaPrincipalComponent implements OnInit {
 
+  listaEjemplo = [
+    {
+      nombre: 'Nacional'
+    },
+    {
+      nombre: 'Pereira'
+    },
+    {
+      nombre: 'Junior'
+    },
+    {
+      nombre: 'Medellin'
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {

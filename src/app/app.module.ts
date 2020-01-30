@@ -11,6 +11,7 @@ import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-p
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { ResaltarDirective } from './core/directives/resaltar.directive';
+import { FiltroPipe } from './core/pipes/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ResaltarDirective } from './core/directives/resaltar.directive';
     EncabezadoComponent,
     InicioSesionComponent,
     PaginaPrincipalComponent,
-    ResaltarDirective
+    ResaltarDirective,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,

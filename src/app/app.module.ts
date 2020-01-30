@@ -10,6 +10,7 @@ import { InicioSesionComponent } from './components/inicio-sesion/inicio-sesion.
 import { PaginaPrincipalComponent } from './components/pagina-principal/pagina-principal.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ResaltarDirective } from './core/directives/resaltar.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {HttpClientModule} from '@angular/common/http';
     PieDePaginaComponent,
     EncabezadoComponent,
     InicioSesionComponent,
-    PaginaPrincipalComponent
+    PaginaPrincipalComponent,
+    ResaltarDirective
   ],
   imports: [
     BrowserModule,

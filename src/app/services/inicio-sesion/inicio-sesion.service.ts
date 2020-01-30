@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FnParam } from '@angular/compiler/src/output/output_ast';
 import { Observable } from 'rxjs';
+import { InicioSesion } from 'src/app/dto/inicio-sesion';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +15,9 @@ export class InicioSesionService {
 
   constructor(private http: HttpClient) {}
 
-  iniciarSesion(formularioCompleto: any): Observable<any> {
+  iniciarSesion(formularioCompleto: any): Observable<InicioSesion> {
     formularioCompleto.token = 'ASDF1233432QSDA';
-    return this.http.post('http://my-json-server.typicode.com/brayan1119/curso-angular/login', formularioCompleto);
+    return this.http.post<InicioSesion>('http://my-json-server.typicode.com/brayan1119/curso-angular/login', formularioCompleto);
   }
 
 }

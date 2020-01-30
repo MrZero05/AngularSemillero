@@ -1,4 +1,21 @@
-<p appResaltar>pagina-principal works!</p>
-<p *ngFor="let equipo of listaEjemplo">
-    {{equipo.nombre}}
-</p>
+<h1>Lista de Usuarios</h1>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Primer Apellido</th>
+            <th scope="col">Segundo Apellido</th>
+            <th scope="col">Primer Nombre</th>
+            <th scope="col">Segundo Nombre</th>
+            <th scope="col">Cedula</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of listaUsers">
+            <th scope="col"> {{user.primerApellido}} </th>
+            <th scope="col"> {{user.segundoApellido}} </th>
+            <th scope="col"> {{user.primerNombre}} </th>
+            <th scope="col"> {{user.segundoNombre}} </th>
+            <th scope="col"> {{user.cedula}} </th>
+        </tr>
+    </tbody>
+</table>

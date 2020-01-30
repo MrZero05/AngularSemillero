@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuarios } from '../../dto/usuarios';
+import { PaginaPrincipalService } from '../../services/pagina-principal/pagina-principal.service';
 
 @Component({
   selector: 'app-pagina-principal',
@@ -7,24 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaPrincipalComponent implements OnInit {
 
-  listaEjemplo = [
-    {
-      nombre: 'Nacional'
-    },
-    {
-      nombre: 'Pereira'
-    },
-    {
-      nombre: 'Junior'
-    },
-    {
-      nombre: 'Medellin'
-    }
-  ];
-
-  constructor() { }
+  listaUsers: Usuarios;
+  constructor(private paginaPrincipalService: PaginaPrincipalService) { }
 
   ngOnInit() {
+    this.showUsers();
+  }
+
+  showUsers() {
+    this.paginaPrincipalService.getUsuarios().subscribe(datos => {
+      console.log('lista usuarios:', datos);
+      this.listaUsers = datos;
+      }, error => {
+        console.error(error);
+      }, () => {
+        console.log('complete');
+      }
+    );
   }
 
 }

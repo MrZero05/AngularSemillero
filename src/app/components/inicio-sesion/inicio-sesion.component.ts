@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators} from '@angular/forms';
+import { InicioSesionService } from '../../services/inicio-sesion/inicio-sesion.service';
 
 @Component({
   selector: 'app-inicio-sesion',
@@ -10,7 +11,7 @@ export class InicioSesionComponent implements OnInit, OnDestroy {
 
 inicioSesionFrom: FormGroup;
 
-  constructor() { }
+  constructor(private inicioSesionService: InicioSesionService ) { }
 
   ngOnInit() {
     this.crearFormulario();
@@ -24,6 +25,7 @@ inicioSesionFrom: FormGroup;
   }
 
   enviarFormulario(){
+    this.inicioSesionService.iniciarSesion(this.inicioSesionFrom.value);
     console.log('formulario', this.inicioSesionFrom.value);
   }
 

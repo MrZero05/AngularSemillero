@@ -16,7 +16,7 @@ export class InicioSesionService implements HttpInterceptor {
       reqClone = req.clone({ headers: new HttpHeaders({ token }) });
       return next.handle(reqClone);
     } else {
-      this.router.navigate(['']);
+      this.router.navigate(['/inicio-sesion']);
     }
   }
 }

@@ -10,6 +10,8 @@ import { PaginaPrincipalService } from '../../services/pagina-principal/pagina-p
 export class PaginaPrincipalComponent implements OnInit {
 
   listaUsers: Usuarios;
+  cedula: string;
+
   constructor(private paginaPrincipalService: PaginaPrincipalService) { }
 
   ngOnInit() {

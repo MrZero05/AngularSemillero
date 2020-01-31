@@ -1,4 +1,6 @@
 <h1>Lista de Usuarios</h1>
+<label>Ingresa cedula: </label>
+<input type="text" name="" id="cedula" [(ngModel)]="cedula">
 <table class="table">
     <thead class="thead-dark">
         <tr>
@@ -10,7 +12,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let user of listaUsers">
+        <tr *ngFor="let user of listaUsers | filtro : cedula">
             <th scope="col"> {{user.primerApellido}} </th>
             <th scope="col"> {{user.segundoApellido}} </th>
             <th scope="col"> {{user.primerNombre}} </th>
